@@ -3,48 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nordische LARP Webseite</title>
+    <title>Galerie | Grimsbane</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
     <style>
-    /* --- GRUNDSTEUERUNG (ALLES HELL) --- */
+    /* --- GRUNDSTEUERUNG --- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     html, body {
         height: 100%;
         overflow: hidden;
         font-family: "Times New Roman", serif;
-        /* Die gesamte Webseite erhält nun den hellen Pergament-Ton */
         background-color: #f4eee1; 
         background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
         color: #1a1a1a;
     }
 
-    /* --- HEADER & FOOTER (HELL & EDEL) --- */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 259px;       /* Exakte Höhe deines Bildes */
-    background-color: #f4eee1; /* Gleiche Farbe wie dein Pergament */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    border-bottom: 3px solid #d4c5a9;
-    overflow: hidden;
-}
-
-.header-image {
-    width: 1000px;       /* Die Originalbreite deines Bildes */
-    height: 259px;       /* Die Originalhöhe deines Bildes */
-    object-fit: contain; /* Zeigt das Bild IMMER komplett an */
-    display: block;
-}
+    /* --- HEADER & FOOTER --- */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 259px;
+        background-color: #f4eee1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        border-bottom: 3px solid #d4c5a9;
+        overflow: hidden;
+    }
 
     footer {
         position: fixed; bottom: 0; left: 0; width: 100%; height: 50px;
@@ -57,224 +49,221 @@ header {
     }
 
     /* --- HAUPTLAYOUT --- */
-.main-wrapper {
-    display: flex;
-    margin-top: 259px;   /* Schiebt den Inhalt exakt unter den Header */
-    height: calc(100vh - 250px - 50px); /* 50px ist die Footer-Höhe */
-}
-
-    /* --- SIDEBAR (HELL & ÜBERSICHTLICH) --- */
-/* --- SIDEBAR (TEXT-BASIERT) --- */
-        .sidebar {
-            width: 260px;
-            height: 100%;
-            background-color: rgba(212, 197, 169, 0.2); 
-            overflow: hidden;
-            display: flex; 
-            flex-direction: column; 
-            align-items: center;
-            padding-top: 20px;
-            padding-bottom: 40px;
-            border-right: 1px solid #d4c5a9;
-        }
-
-        .menu-item {
-            display: flex;
-            flex: 1; 
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            color: #5d2e0a; /* Dunkelbraun */
-            font-family: "Times New Roman", serif;
-            font-size: 1.1em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: all 0.3s ease; /* Sanfter Übergang für das Leuchten */
-            border-bottom: 1px solid rgba(93, 46, 10, 0.1); /* Dezente Trennlinie */
-        }
-
-        /* --- HOVER EFFEKT (LEUCHTEN) --- */
-        .menu-item:hover {
-            color: #8b4513; /* Etwas helleres Braun beim Hover */
-            background-color: rgba(255, 255, 255, 0.3); /* Leichter heller Hintergrund */
-            text-shadow: 0px 0px 10px rgba(139, 69, 19, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.8);
-            letter-spacing: 4px; /* Text dehnt sich leicht aus */
-        }
-
-        /* --- CONTENT BEREICH (MIT TIEFEREM SCHATTEN) --- */
-        .content-area {
-            flex-grow: 1; 
-            height: 100%; 
-            overflow-y: scroll;
-            padding: 60px 50px; 
-            padding-bottom: 100px;
-            background-color: #f4eee1;
-            background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
-            
-            border-left: 1px solid #d4c5a9;
-            
-            /* TIEFERER SCHATTEN: Erzeugt den Effekt, dass das Pergament unter der Sidebar liegt */
-            box-shadow: inset 25px 0 25px -15px rgba(0,0,0,0.1); 
-            
-            color: #1a1a1a !important; 
-            text-align: justify;
-            line-height: 1.8;
-        }
-    /* --- DER BLATT-SCROLLBALKEN (PASSEND ZUM HELLEN DESIGN) --- */
-    .content-area::-webkit-scrollbar { width: 50px; }
-    .content-area::-webkit-scrollbar-track { 
-        background: #eaddca; 
-        border-left: 1px solid #d4c5a9;
+    .main-wrapper {
+        display: flex;
+        margin-top: 259px;
+        height: calc(100vh - 259px - 50px); 
     }
+
+    /* --- SIDEBAR --- */
+    .sidebar {
+        width: 260px;
+        height: 100%;
+        background-color: rgba(212, 197, 169, 0.2); 
+        overflow: hidden;
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        border-right: 1px solid #d4c5a9;
+    }
+
+    .menu-item {
+        display: flex;
+        flex: 1; 
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #5d2e0a;
+        font-family: "Times New Roman", serif;
+        font-size: 1.1em;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(93, 46, 10, 0.1);
+    }
+
+    .menu-item:hover {
+        color: #8b4513;
+        background-color: rgba(255, 255, 255, 0.3);
+        text-shadow: 0px 0px 10px rgba(139, 69, 19, 0.5);
+    }
+
+    /* --- CONTENT BEREICH --- */
+    .content-area {
+        flex-grow: 1; 
+        height: 100%; 
+        overflow-y: scroll;
+        padding: 40px 50px; 
+        background-color: #f4eee1;
+        background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+        border-left: 1px solid #d4c5a9;
+        box-shadow: inset 25px 0 25px -15px rgba(0,0,0,0.1); 
+        line-height: 1.8;
+    }
+
+    /* --- GALERIE GRID SYSTEM --- */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+        padding-bottom: 50px;
+    }
+
+    .gallery-item {
+        background: rgba(234, 221, 202, 0.4);
+        border: 1px solid #d4c5a9;
+        padding: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(93, 46, 10, 0.15);
+        background: rgba(234, 221, 202, 0.7);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* Schneidet Bilder gleichmäßig zu */
+        border: 1px solid #5d2e0a;
+        margin-bottom: 10px;
+    }
+
+    .gallery-item span {
+        font-family: 'Cinzel', serif;
+        font-weight: bold;
+        color: #5d2e0a;
+        display: block;
+        margin-top: 5px;
+    }
+
+    /* --- TYPOGRAFIE --- */
+    .auto-style6 {
+        display: block;
+        width: 100%;
+        font-size: xx-large;
+        color: #5d2e0a;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #d4c5a9;
+        letter-spacing: 2px;
+        font-family: Norse;
+        text-align: center;
+    }
+
+    .intro-text {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 20px auto;
+        font-size: 1.1em;
+    }
+
+    .disclaimer {
+        text-align: center;
+        font-size: 0.85em;
+        font-style: italic;
+        color: #666;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* SCROLLBAR */
+    .content-area::-webkit-scrollbar { width: 50px; }
+    .content-area::-webkit-scrollbar-track { background: #eaddca; }
     .content-area::-webkit-scrollbar-thumb { 
         background-image: url('blatt.png'); background-size: contain;
         background-repeat: no-repeat; background-position: center;
         background-color: transparent;
-        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
-        border-right: 15px solid transparent; background-clip: padding-box;
     }
 
-    /* --- TYPOGRAFIE --- */
-    .content-text {
-        max-width: 850px;
-        margin: 0 auto;
-        color: #1a1a1a !important;
-    }
+    .auto-style7 {
+	font-size: medium;
+	font-family: Norse;
+}
 
-    .auto-style6 {
-		display: block;
-		width: 100%;
-		font-size: large;
-		color: #5d2e0a;
-		margin-top: 40px;
-		margin-bottom: 20px;
-		border-bottom: 1px solid #d4c5a9;
-		letter-spacing: 2px;
-		font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-	text-align: center;
-}
-	.auto-style7 {
-		font-size: large;
-	}
-	.auto-style8 {
-		font-family: "Times New Roman";
-		color: #000000;
-	}
-    .auto-style9 {
-	font-size: x-large;
-}
-    .auto-style10 {
-		text-align: center;
-	}
     </style>
 </head>
 <body>
 
-<header class="auto-style10">
-    <img height="259" src="grimsbanebanner1.png" width="1350">
+<header>
+    <img src="grimsbanebanner1.png" class="header-image" alt="Banner">
 </header>
-    <div class="main-wrapper">
+
+<div class="main-wrapper">
+    <nav class="sidebar">
+        <a href="index.html" class="menu-item">Willkommen</a>
+        <a href="ueber-uns.html" class="menu-item">Über Uns</a>
+        <a href="mitglieder.html" class="menu-item">Mitglieder</a>
+        <a href="events.html" class="menu-item">Events</a>
+        <a href="landkarte.html" class="menu-item">Landkarte</a>
+        <a href="charakter.html" class="menu-item">Charaktere</a>
+        <a href="mitglied-werden.html" class="menu-item">Mitmachen</a>
+        <a href="faq.html" class="menu-item">FAQ</a>
+        <a href="galerie.html" class="menu-item">Galerie</a>
+        <a href="news.html" class="menu-item">Neuigkeiten</a>
+        <a href="merchandise.html" class="menu-item">Merchandise</a>
+        <a href="impressum.html" class="menu-item">Impressum</a>
+    </nav>
+
+    <main class="content-area">
+        <h2 class="auto-style6">Galerie</h2>
         
-        <nav class="sidebar">
-            <a href="index.html" class="menu-item">Willkommen</a>
-            <a href="ueber-uns.html" class="menu-item">Über Uns</a>
-            <a href="mitglieder.html" class="menu-item">Mitglieder</a>
-            <a href="events.html" class="menu-item">Events</a>
-            <a href="landkarte.html" class="menu-item">Landkarte</a>
-            <a href="charakter.html" class="menu-item">Charaktere</a>
-            <a href="mitglied-werden.html" class="menu-item">Mitmachen</a>
-            <a href="faq.html" class="menu-item">FAQ</a>
-            <a href="galerie.html" class="menu-item">Galerie</a>
-            <a href="news.html" class="menu-item">Neuigkeiten</a>
-            <a href="merchandise.html" class="menu-item">Merchandise</a>
-            <a href="impressum.html" class="menu-item">Impressum</a>
-        </nav>
+        <div class="intro-text">
+            <p>Willkommen in unserer Galerie. Man könnte es auch Blitzhafte Erinnerungsbilder nennen. Viel Spaß beim Stöbern!</p>
+            <p>Solltet ihr noch selbst Bilder haben, sendet diese gern an die Admins!</p>
+        </div>
 
-        <main class="content-area">
-            <div class="content-text">
-                <h2 class="auto-style6">
-				<img height="116" src="willkommen.png" width="480"></h2>
-				<p class="auto-style10">&nbsp;</p>
-				<p>&nbsp;</p>
-				<p class="auto-style10"><span class="auto-style8">
-				<span class="auto-style7">Schön, 
-				dass du den Weg zu uns gefunden hast!</span></span></p>
-				<p><span class="auto-style8"><br class="auto-style7">
-				<span class="auto-style7">Wir sind eine junge 
-				Live-Rollenspiel-Gruppe, die mit viel Leidenschaft und Freude in 
-				fantastische Welten eintaucht. Noch stehen wir am Anfang – 
-				aktuell besteht unsere Gemeinschaft aus drei Spielern – doch 
-				unser Ziel ist es, eine lebendige Gilde aufzubauen, in der viele 
-				Abenteurer, Träumer und Kämpfer zusammenfinden.</span></span></p>
-				<p><span class="auto-style8"></p>
-				<h2 class="auto-style7">&nbsp;</h2>
-				<h2 class="auto-style9">
-				<img height="54" src="wersindwir.png" width="371"></h2>
-				<p class="auto-style7">Wir sind keine alteingesessene 
-				Großgruppe, sondern eine Gemeinschaft im Aufbau. Das macht uns 
-				besonders: Bei uns kannst du von Anfang an mitgestalten, Ideen 
-				einbringen und deine Rolle in einer wachsenden Gilde finden. Wir 
-				suchen Menschen, die wie wir Lust haben, gemeinsam Abenteuer zu 
-				erleben, Freundschaften zu knüpfen und etwas Neues entstehen zu 
-				lassen.</p>
-				<h2 class="auto-style7">&nbsp;</h2>
-				<h2 class="auto-style9"><span class="auto-style8"><span class="auto-style9">
-				<img height="487" src="balispazieren1.png" style="float: left" width="300"></span></span>Unser Ziel</h2>
-				<p class="auto-style7">Unser erster großer Schritt führt uns 
-				zum&nbsp;Drachenfest, wo wir als Gilde auftreten wollen. Doch damit 
-				soll es nicht enden: Auch andere Cons – ob groß oder klein – 
-				stehen für uns offen. Wir möchten langfristig eine Gruppe 
-				schaffen, die nicht nur auf einem einzelnen Event präsent ist, 
-				sondern als Gemeinschaft weiterwächst.</p>
-				<p class="auto-style7">&nbsp;</p>
-				<h2 class="auto-style9">Was dich bei uns erwartet</h2>
-				<ul>
-					<li>
-					<p class="auto-style7">Gemeinschaft &amp; Zusammenhalt&nbsp;– Wir 
-					stehen füreinander ein, im Spiel wie auch außerhalb.</p>
-					</li>
-					<li>
-					<p class="auto-style7">Raum für Kreativität&nbsp;– Dein Charakter 
-					soll bei uns Platz haben, egal ob Held, Heiler, Gelehrter 
-					oder Draufgänger.</p>
-					</li>
-					<li>
-					<p class="auto-style7">Unterstützung für Einsteiger&nbsp;– Auch 
-					wenn du noch nie auf einem Con warst: Wir helfen dir gern 
-					mit Tipps zu Charakterkonzept, Ausrüstung und allem, was du 
-					wissen musst.</p>
-					</li>
-					<li>
-					<p class="auto-style7">Freude am Spiel&nbsp;– Uns geht es nicht 
-					um Perfektion, sondern darum, gemeinsam Spaß zu haben und 
-					Geschichten zu erschaffen.</p>
-					</li>
-				</ul>
-				<h2 class="auto-style7"><br><span class="auto-style9">Unsere Werte<img height="275" src="narvikfeuer1.png" style="float: right" width="300"></span></h2>
-				<p class="auto-style7">Respekt, Fairness und ein freundliches 
-				Miteinander sind für uns selbstverständlich. Wir legen Wert 
-				darauf, dass jeder sich willkommen fühlt – unabhängig von 
-				Erfahrung, Herkunft oder Charakterkonzept.</p>
-				<p class="auto-style7">&nbsp;</p>
-				<h2 class="auto-style9">Werde Teil unserer Gilde</h2>
-				<p class="auto-style7">Wenn du noch keine Gruppe hast, aber den 
-				Wunsch nach Anschluss verspürst, bist du bei uns genau richtig. 
-				Ob du allein kommst oder mit Freunden – wir freuen uns über 
-				jeden, der mit uns die Gilde wachsen lässt.</p>
-				<p class="auto-style7">&nbsp;</p>
-				<p><span class="auto-style7">Hast du Lust, dabei zu sein?</span><br class="auto-style7">
-				<br class="auto-style7"><span class="auto-style7">Dann melde 
-				dich bei uns und werde Teil einer Gemeinschaft, die gerade erst 
-				beginnt, aber schon voller Abenteuer steckt.</span></p>
-				<p>&nbsp;</p>
-				<p class="auto-style7"><strong><em>Auf ins Spiel – wir sehen uns beim 
-				Drachenfest!</em></strong></span></p>
+        <div class="disclaimer">
+            (Bitte habt Verständnis, da dies die anfänglichen Erstversuche waren, nun nicht zu sehr auf Details zu achten. Wir wissen, dass damals noch viele Outtime-Dinge wie Flaschen im Bild waren, aber es waren unsere ersten eigenen Cons.)
+        </div>
+
+        <div class="gallery-grid">
+            
+         <div class="gallery-grid">
+    
+    <div class="gallery-item">
+        <a href="rivendell.html">
+        <img src="galerie1.png" alt="Rivendell 2004" style="width: 300px; height: 171px"></a>
+        <span class="auto-style7">Rivendell - 2004</span>
+    </div>
+            <div class="gallery-item">
+                <a href="galadoriath1.html">
+				<img src="galerie3.png" style="width: 300px; height: 171px"></a>
+                <span>Galadoriath I - 2005</span>
             </div>
-        </main>
-    </div> <footer>
-        <div>Bianca Schütte 2026</div>
-    </footer>
 
-</body></html>
+            <div class="gallery-item">
+                <a href="galadoriath2.html">
+				<img src="galerie4.png" style="width: 300px; height: 171px"></a>
+                <span>Galadoriath II - 2005</span>
+            </div>
+
+            <div class="gallery-item">
+                <a href="galadoriath3.html">
+				<img src="galerie5.png" style="width: 300px; height: 171px"></a>
+                <span>Galadoriath III - 2007</span>
+            </div>
+
+            <div class="gallery-item">
+                <a href="silmanore.html">
+				<img src="galerie6.png" style="width: 300px; height: 171px"></a>
+                <span>Silmanore - 2008</span>
+            </div>
+
+            </div>
+    </main>
+</div>
+
+<footer>
+    <div>Bianca Schütte 2026</div>
+</footer>
+
+</body>
+</html>

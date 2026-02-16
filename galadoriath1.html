@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordische LARP Webseite</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <style>
+    /* --- GRUNDSTEUERUNG (ALLES HELL) --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+        height: 100%;
+        overflow: hidden;
+        font-family: "Times New Roman", serif;
+        /* Die gesamte Webseite erhält nun den hellen Pergament-Ton */
+        background-color: #f4eee1; 
+        background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+        color: #1a1a1a;
+    }
+
+    /* --- HEADER & FOOTER (HELL & EDEL) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;       /* Exakte Höhe deines Bildes */
+    background-color: #f4eee1; /* Gleiche Farbe wie dein Pergament */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 3px solid #d4c5a9;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 1000px;       /* Die Originalbreite deines Bildes */
+    height: 150px;       /* Die Originalhöhe deines Bildes */
+    object-fit: contain; /* Zeigt das Bild IMMER komplett an */
+    display: block;
+}
+
+    footer {
+        position: fixed; bottom: 0; left: 0; width: 100%; height: 20px;
+        background-color: #eaddca; 
+        border-top: 2px solid #d4c5a9;
+        display: flex; align-items: center; justify-content: center;
+        z-index: 1000; 
+        color: #5d2e0a;
+        font-weight: bold;
+    }
+
+    /* --- HAUPTLAYOUT --- */
+.main-wrapper {
+    display: flex;
+    margin-top: 150px;   /* Schiebt den Inhalt exakt unter den Header */
+    height: calc(100vh - 150px - 50px); /* 50px ist die Footer-Höhe */
+}
+
+    /* --- SIDEBAR (HELL & ÜBERSICHTLICH) --- */
+/* --- SIDEBAR (TEXT-BASIERT) --- */
+        .sidebar {
+            width: 260px;
+            height: 100%;
+            background-color: rgba(212, 197, 169, 0.2); 
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            border-right: 1px solid #d4c5a9;
+        }
+
+        .menu-item {
+            display: flex;
+            flex: 1; 
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #5d2e0a; /* Dunkelbraun */
+            font-family: "Times New Roman", serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease; /* Sanfter Übergang für das Leuchten */
+            border-bottom: 1px solid rgba(93, 46, 10, 0.1); /* Dezente Trennlinie */
+        }
+
+        /* --- HOVER EFFEKT (LEUCHTEN) --- */
+        .menu-item:hover {
+            color: #8b4513; /* Etwas helleres Braun beim Hover */
+            background-color: rgba(255, 255, 255, 0.3); /* Leichter heller Hintergrund */
+            text-shadow: 0px 0px 10px rgba(139, 69, 19, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.8);
+            letter-spacing: 4px; /* Text dehnt sich leicht aus */
+        }
+
+        /* --- CONTENT BEREICH (MIT TIEFEREM SCHATTEN) --- */
+        .content-area {
+            flex-grow: 1; 
+            height: 100%; 
+            overflow-y: scroll;
+            padding: 60px 50px; 
+            padding-bottom: 100px;
+            background-color: #f4eee1;
+            background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+            
+            border-left: 1px solid #d4c5a9;
+            
+            /* TIEFERER SCHATTEN: Erzeugt den Effekt, dass das Pergament unter der Sidebar liegt */
+            box-shadow: inset 25px 0 25px -15px rgba(0,0,0,0.1); 
+            
+            color: #1a1a1a !important; 
+            text-align: justify;
+            line-height: 1.8;
+        }
+    /* --- DER BLATT-SCROLLBALKEN (PASSEND ZUM HELLEN DESIGN) --- */
+    .content-area::-webkit-scrollbar { width: 50px; }
+    .content-area::-webkit-scrollbar-track { 
+        background: #eaddca; 
+        border-left: 1px solid #d4c5a9;
+    }
+    .content-area::-webkit-scrollbar-thumb { 
+        background-image: url('blatt.png'); background-size: contain;
+        background-repeat: no-repeat; background-position: center;
+        background-color: transparent;
+        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+        border-right: 15px solid transparent; background-clip: padding-box;
+    }
+
+    /* --- TYPOGRAFIE --- */
+    .content-text {
+        max-width: 850px;
+        margin: 0 auto;
+        color: #1a1a1a !important;
+    }
+
+    .auto-style10 {
+		text-align: center;
+	}
+	<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+
+    .auto-style11 {
+		font-size: xx-large;
+		font-family: Viking-Normal;
+	}
+	.auto-style12 {
+		font-size: x-large;
+		font-family: Norse;
+	}
+
+    .auto-style13 {
+		margin-left: 12;
+	}
+
+    </style>
+</head>
+<body>
+
+<header class="auto-style10" style="left: 0; top: 0">
+    <br><strong><span class="auto-style11">Galadoriath part 1 - 2005<br><br></span>
+	<span class="auto-style12"><a href="galerie.html">&lt; zurück zur Übersicht &gt;
+	</a></span></strong>
+</header>
+    <div class="main-wrapper">
+        
+        <main class="content-area">
+          <div class="auto-style10">
+<a href="https://postimg.cc/CZj8nbhB" target="_blank">
+			  <img src="https://i.postimg.cc/CZj8nbhB/153.jpg" alt="153" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/t1h6nFqn" target="_blank">
+			  <img src="https://i.postimg.cc/t1h6nFqn/154.jpg" alt="154" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/CZj8nbhq" target="_blank">
+			  <img src="https://i.postimg.cc/CZj8nbhq/155.jpg" alt="155" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/nsvm9qFQ" target="_blank">
+			  <img src="https://i.postimg.cc/nsvm9qFQ/156.jpg" alt="156" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/gwvhL3zR" target="_blank">
+			  <img src="https://i.postimg.cc/gwvhL3zR/157.jpg" alt="157" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/SXW9YcSc" target="_blank">
+			  <img src="https://i.postimg.cc/SXW9YcSc/158.jpg" alt="158" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/Ny1X2Rs8" target="_blank">
+			  <img src="https://i.postimg.cc/Ny1X2Rs8/160.jpg" alt="160" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/B8xFP2Sx" target="_blank">
+			  <img src="https://i.postimg.cc/B8xFP2Sx/161.jpg" alt="161" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/zLnhHTzS" target="_blank">
+			  <img src="https://i.postimg.cc/zLnhHTzS/162.jpg" alt="162" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/WDMZq0N7" target="_blank">
+			  <img src="https://i.postimg.cc/WDMZq0N7/163.jpg" alt="163" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/3ygG028B" target="_blank">
+			  <img src="https://i.postimg.cc/3ygG028B/164.jpg" alt="164" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/DWqG41v6" target="_blank">
+			  <img src="https://i.postimg.cc/DWqG41v6/165.jpg" alt="165" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/Tyrb5nd7" target="_blank">
+			  <img src="https://i.postimg.cc/Tyrb5nd7/166.jpg" alt="166" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/kVxSRWJH" target="_blank">
+			  <img src="https://i.postimg.cc/kVxSRWJH/168.jpg" alt="168" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/cKQ3tfxb" target="_blank">
+			  <img src="https://i.postimg.cc/cKQ3tfxb/170.jpg" alt="170" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/v1Wnx5Yj" target="_blank">
+			  <img src="https://i.postimg.cc/v1Wnx5Yj/171.jpg" alt="171" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/06pSK7kL" target="_blank">
+			  <img src="https://i.postimg.cc/06pSK7kL/172.jpg" alt="172" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/S2kM6jRd" target="_blank">
+			  <img src="https://i.postimg.cc/S2kM6jRd/173.jpg" alt="173" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/r0Mr1zsf" target="_blank">
+			  <img src="https://i.postimg.cc/r0Mr1zsf/174.jpg" alt="174" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/1nsqG4XJ" target="_blank">
+			  <img src="https://i.postimg.cc/1nsqG4XJ/175.jpg" alt="175" height="111" class="auto-style13" width="150"></a>	<a href="https://postimg.cc/Q9hTQVC6" target="_blank">
+			  <img src="https://i.postimg.cc/Q9hTQVC6/176.jpg" alt="176" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/xJnzvq8p" target="_blank">
+			  <img src="https://i.postimg.cc/xJnzvq8p/177.jpg" alt="177" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/qh43sgqb" target="_blank">
+			  <img src="https://i.postimg.cc/qh43sgqb/178.jpg" alt="178" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/zb8gC3vP" target="_blank">
+			  <img src="https://i.postimg.cc/zb8gC3vP/179.jpg" alt="179" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/cg0nR6Cz" target="_blank">
+			  <img src="https://i.postimg.cc/cg0nR6Cz/180.jpg" alt="180" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/R64H7qh8" target="_blank">
+			  <img src="https://i.postimg.cc/R64H7qh8/181.jpg" alt="181" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/LY21th5w" target="_blank">
+			  <img src="https://i.postimg.cc/LY21th5w/182.jpg" alt="182" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/mzBHYhk0" target="_blank">
+			  <img src="https://i.postimg.cc/mzBHYhk0/183.jpg" alt="183" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/Q9hTQVVL" target="_blank">
+			  <img src="https://i.postimg.cc/Q9hTQVVL/184.jpg" alt="184" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/9RC7dzz5" target="_blank">
+			  <img src="https://i.postimg.cc/9RC7dzz5/185.jpg" alt="185" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/Q9hTQVVZ" target="_blank">
+			  <img src="https://i.postimg.cc/Q9hTQVVZ/186.jpg" alt="186" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/VrmCq558" target="_blank">
+			  <img src="https://i.postimg.cc/VrmCq558/187.jpg" alt="187" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/KkxMP44x" target="_blank">
+			  <img src="https://i.postimg.cc/KkxMP44x/188.jpg" alt="188" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/mzBHYhhR" target="_blank">
+			  <img src="https://i.postimg.cc/mzBHYhhR/189.jpg" alt="189" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/KkxMP44m" target="_blank">
+			  <img src="https://i.postimg.cc/KkxMP44m/190.jpg" alt="190" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/62tvrTT5" target="_blank">
+			  <img src="https://i.postimg.cc/62tvrTT5/191.jpg" alt="191" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/hzcdLhhj" target="_blank">
+			  <img src="https://i.postimg.cc/hzcdLhhj/192.jpg" alt="192" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/zb8gC333" target="_blank">
+			  <img src="https://i.postimg.cc/zb8gC333/193.jpg" alt="193" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/DJ6bBFbF" target="_blank">
+			  <img src="https://i.postimg.cc/DJ6bBFbF/194.jpg" alt="194" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/VrgbD1bm" target="_blank">
+			  <img src="https://i.postimg.cc/VrgbD1bm/195.jpg" alt="195" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/BLp1Ms1S" target="_blank">
+			  <img src="https://i.postimg.cc/BLp1Ms1S/196.jpg" alt="196" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/N9DrpYrL" target="_blank">
+			  <img src="https://i.postimg.cc/N9DrpYrL/197.jpg" alt="197" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/CB7fmYfK" target="_blank">
+			  <img src="https://i.postimg.cc/CB7fmYfK/199.jpg" alt="199" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/ygjSvBSx" target="_blank">
+			  <img src="https://i.postimg.cc/ygjSvBSx/200.jpg" alt="200" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/mzjF8RFP" target="_blank">
+			  <img src="https://i.postimg.cc/mzjF8RFP/201.jpg" alt="201" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/nj2Q0ZQs" target="_blank">
+			  <img src="https://i.postimg.cc/nj2Q0ZQs/202.jpg" alt="202" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/BLp1Ms1L" target="_blank">
+			  <img src="https://i.postimg.cc/BLp1Ms1L/203.jpg" alt="203" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/zb7R05Rh" target="_blank">
+			  <img src="https://i.postimg.cc/zb7R05Rh/204.jpg" alt="204" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/mzjF8RFM" target="_blank">
+			  <img src="https://i.postimg.cc/mzjF8RFM/206.jpg" alt="206" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/9RbqJVqZ" target="_blank">
+			  <img src="https://i.postimg.cc/9RbqJVqZ/207.jpg" alt="207" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/ftC0BZ0x" target="_blank">
+			  <img src="https://i.postimg.cc/ftC0BZ0x/208.jpg" alt="208" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/KkfgJFg7" target="_blank">
+			  <img src="https://i.postimg.cc/KkfgJFg7/209.jpg" alt="209" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/ZBHyVZyx" target="_blank">
+			  <img src="https://i.postimg.cc/ZBHyVZyx/210.jpg" alt="210" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/JDxBPmBQ" target="_blank">
+			  <img src="https://i.postimg.cc/JDxBPmBQ/216.jpg" alt="216" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/2bGB2mBw" target="_blank">
+			  <img src="https://i.postimg.cc/2bGB2mBw/217.jpg" alt="217" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/XGLyQ3yL" target="_blank">
+			  <img src="https://i.postimg.cc/XGLyQ3yL/218.jpg" alt="218" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/m1r1nqQM" target="_blank">
+			  <img src="https://i.postimg.cc/m1r1nqQM/219.jpg" alt="219" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/BPvPzyxF" target="_blank">
+			  <img src="https://i.postimg.cc/BPvPzyxF/220.jpg" alt="220" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/ctJtzjQf" target="_blank">
+			  <img src="https://i.postimg.cc/ctJtzjQf/221.jpg" alt="221" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/y3N3G5FF" target="_blank">
+			  <img src="https://i.postimg.cc/y3N3G5FF/222.jpg" alt="222" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/vxmxKjWv" target="_blank">
+			  <img src="https://i.postimg.cc/vxmxKjWv/223.jpg" alt="223" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/YLSLPV1R" target="_blank">
+			  <img src="https://i.postimg.cc/YLSLPV1R/224.jpg" alt="224" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/5QtQrGwS" target="_blank">
+			  <img src="https://i.postimg.cc/5QtQrGwS/225.jpg" alt="225" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/fSbSPFxK" target="_blank">
+			  <img src="https://i.postimg.cc/fSbSPFxK/226.jpg" alt="226" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/SYKYP5WZ" target="_blank">
+			  <img src="https://i.postimg.cc/SYKYP5WZ/227.jpg" alt="227" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/FkKk6qjW" target="_blank">
+			  <img src="https://i.postimg.cc/FkKk6qjW/228.jpg" alt="228" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/fSbSPFx8" target="_blank">
+			  <img src="https://i.postimg.cc/fSbSPFx8/229.jpg" alt="229" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/64Q4PSdm" target="_blank">
+			  <img src="https://i.postimg.cc/64Q4PSdm/230.jpg" alt="230" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/D4z4NDqH" target="_blank">
+			  <img src="https://i.postimg.cc/D4z4NDqH/231.jpg" alt="231" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/kR5RHZx0" target="_blank">
+			  <img src="https://i.postimg.cc/kR5RHZx0/232.jpg" alt="232" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/D4z4NDqR" target="_blank">
+			  <img src="https://i.postimg.cc/D4z4NDqR/233.jpg" alt="233" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/n9L9W54t" target="_blank">
+			  <img src="https://i.postimg.cc/n9L9W54t/234.jpg" alt="234" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/nMVmMs6j" target="_blank">
+			  <img src="https://i.postimg.cc/nMVmMs6j/235.jpg" alt="235" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/s1fW1BtZ" target="_blank">
+			  <img src="https://i.postimg.cc/s1fW1BtZ/236.jpg" alt="236" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/0r5Sr6LK" target="_blank">
+			  <img src="https://i.postimg.cc/0r5Sr6LK/237.jpg" alt="237" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/F1FS1f2L" target="_blank">
+			  <img src="https://i.postimg.cc/F1FS1f2L/238.jpg" alt="238" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/BtZFt8d5" target="_blank">
+			  <img src="https://i.postimg.cc/BtZFt8d5/239.jpg" alt="239" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/xqjmqkWP" target="_blank">
+			  <img src="https://i.postimg.cc/xqjmqkWP/240.jpg" alt="240" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/mhZ9hc0N" target="_blank">
+			  <img src="https://i.postimg.cc/mhZ9hc0N/241.jpg" alt="241" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/dDQCD7zj" target="_blank">
+			  <img src="https://i.postimg.cc/dDQCD7zj/242.jpg" alt="242" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/14RF4gLB" target="_blank">
+			  <img src="https://i.postimg.cc/14RF4gLB/243.jpg" alt="243" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/mhZ9hc08" target="_blank">
+			  <img src="https://i.postimg.cc/mhZ9hc08/244.jpg" alt="244" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/HjWMjJf2" target="_blank">
+			  <img src="https://i.postimg.cc/HjWMjJf2/245.jpg" alt="245" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/jCqfCWGv" target="_blank">
+			  <img src="https://i.postimg.cc/jCqfCWGv/246.jpg" alt="246" height="111" class="auto-style13" width="150"></a>
+			  <a href="https://postimg.cc/0r5Sr6LX" target="_blank">
+			  <img src="https://i.postimg.cc/0r5Sr6LX/247.jpg" alt="247" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/3WLvG8TC" target="_blank">
+			  <img src="https://i.postimg.cc/3WLvG8TC/248.jpg" alt="248" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/RqCtq3jD" target="_blank">
+			  <img src="https://i.postimg.cc/RqCtq3jD/249.jpg" alt="249" height="111" class="auto-style13" width="150"></a> <a href="https://postimg.cc/kDMSDVkh" target="_blank">
+			  <img src="https://i.postimg.cc/kDMSDVkh/253.jpg" alt="253" height="111" class="auto-style13" width="150"></a><br><br>
+</div>
+        </main>
+    </div> <footer>
+        <div>Bianca Schütte 2026</div>
+    </footer>
+
+</body></html>

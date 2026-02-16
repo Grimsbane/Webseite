@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nordische LARP Webseite</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <style>
+    /* --- GRUNDSTEUERUNG (ALLES HELL) --- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+        height: 100%;
+        overflow: hidden;
+        font-family: "Times New Roman", serif;
+        /* Die gesamte Webseite erhält nun den hellen Pergament-Ton */
+        background-color: #f4eee1; 
+        background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+        color: #1a1a1a;
+    }
+
+    /* --- HEADER & FOOTER (HELL & EDEL) --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;       /* Exakte Höhe deines Bildes */
+    background-color: #f4eee1; /* Gleiche Farbe wie dein Pergament */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 3px solid #d4c5a9;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 1000px;       /* Die Originalbreite deines Bildes */
+    height: 150px;       /* Die Originalhöhe deines Bildes */
+    object-fit: contain; /* Zeigt das Bild IMMER komplett an */
+    display: block;
+}
+
+    footer {
+        position: fixed; bottom: 0; left: 0; width: 100%; height: 20px;
+        background-color: #eaddca; 
+        border-top: 2px solid #d4c5a9;
+        display: flex; align-items: center; justify-content: center;
+        z-index: 1000; 
+        color: #5d2e0a;
+        font-weight: bold;
+    }
+
+    /* --- HAUPTLAYOUT --- */
+.main-wrapper {
+    display: flex;
+    margin-top: 150px;   /* Schiebt den Inhalt exakt unter den Header */
+    height: calc(100vh - 150px - 50px); /* 50px ist die Footer-Höhe */
+}
+
+    /* --- SIDEBAR (HELL & ÜBERSICHTLICH) --- */
+/* --- SIDEBAR (TEXT-BASIERT) --- */
+        .sidebar {
+            width: 260px;
+            height: 100%;
+            background-color: rgba(212, 197, 169, 0.2); 
+            overflow: hidden;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            border-right: 1px solid #d4c5a9;
+        }
+
+        .menu-item {
+            display: flex;
+            flex: 1; 
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #5d2e0a; /* Dunkelbraun */
+            font-family: "Times New Roman", serif;
+            font-size: 1.1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease; /* Sanfter Übergang für das Leuchten */
+            border-bottom: 1px solid rgba(93, 46, 10, 0.1); /* Dezente Trennlinie */
+        }
+
+        /* --- HOVER EFFEKT (LEUCHTEN) --- */
+        .menu-item:hover {
+            color: #8b4513; /* Etwas helleres Braun beim Hover */
+            background-color: rgba(255, 255, 255, 0.3); /* Leichter heller Hintergrund */
+            text-shadow: 0px 0px 10px rgba(139, 69, 19, 0.5), 0px 0px 20px rgba(255, 255, 255, 0.8);
+            letter-spacing: 4px; /* Text dehnt sich leicht aus */
+        }
+
+        /* --- CONTENT BEREICH (MIT TIEFEREM SCHATTEN) --- */
+        .content-area {
+            flex-grow: 1; 
+            height: 100%; 
+            overflow-y: scroll;
+            padding: 60px 50px; 
+            padding-bottom: 100px;
+            background-color: #f4eee1;
+            background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+            
+            border-left: 1px solid #d4c5a9;
+            
+            /* TIEFERER SCHATTEN: Erzeugt den Effekt, dass das Pergament unter der Sidebar liegt */
+            box-shadow: inset 25px 0 25px -15px rgba(0,0,0,0.1); 
+            
+            color: #1a1a1a !important; 
+            text-align: justify;
+            line-height: 1.8;
+        }
+    /* --- DER BLATT-SCROLLBALKEN (PASSEND ZUM HELLEN DESIGN) --- */
+    .content-area::-webkit-scrollbar { width: 50px; }
+    .content-area::-webkit-scrollbar-track { 
+        background: #eaddca; 
+        border-left: 1px solid #d4c5a9;
+    }
+    .content-area::-webkit-scrollbar-thumb { 
+        background-image: url('blatt.png'); background-size: contain;
+        background-repeat: no-repeat; background-position: center;
+        background-color: transparent;
+        filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.2));
+        border-right: 15px solid transparent; background-clip: padding-box;
+    }
+
+    /* --- TYPOGRAFIE --- */
+    .content-text {
+        max-width: 850px;
+        margin: 0 auto;
+        color: #1a1a1a !important;
+    }
+
+    .auto-style10 {
+		text-align: center;
+	}
+	<style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+
+    .auto-style11 {
+		font-size: xx-large;
+		font-family: Viking-Normal;
+	}
+	.auto-style12 {
+		font-size: x-large;
+		font-family: Norse;
+	}
+
+    </style>
+</head>
+<body>
+
+<header class="auto-style10" style="left: 0; top: 0">
+    <br><strong><span class="auto-style11">Silmanore - 2008<br><br></span>
+	<span class="auto-style12"><a href="galerie.html">&lt; zurück zur Übersicht &gt;
+	</a></span></strong>
+</header>
+    <div class="main-wrapper">
+        
+        <main class="content-area">
+          <div class="auto-style10">
+<a href="https://postimg.cc/p9ps8G93" target="_blank">
+			  <img src="https://i.postimg.cc/p9ps8G93/CIMG0770.jpg" alt="CIMG0770" height="111"></a> <a href="https://postimg.cc/cKrFY9Kj" target="_blank">
+			  <img src="https://i.postimg.cc/cKrFY9Kj/CIMG0777.jpg" alt="CIMG0777" height="111"></a> <a href="https://postimg.cc/67yMRj2X" target="_blank">
+			  <img src="https://i.postimg.cc/67yMRj2X/CIMG0888.jpg" alt="CIMG0888" height="111"></a> <a href="https://postimg.cc/qgXWpF2S" target="_blank">
+			  <img src="https://i.postimg.cc/qgXWpF2S/Altar.jpg" alt="Altar" height="111"></a>
+			  <a href="https://postimg.cc/7bDQtNjg" target="_blank">
+			  <img src="https://i.postimg.cc/7bDQtNjg/Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(10).jpg" alt="Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(10)" height="111"></a> <a href="https://postimg.cc/xN0xk0KD" target="_blank">
+			  <img src="https://i.postimg.cc/xN0xk0KD/Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(2).jpg" alt="Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(2)" height="111"></a> <a href="https://postimg.cc/5Qx7Hxwc" target="_blank">
+			  <img src="https://i.postimg.cc/5Qx7Hxwc/Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(4).jpg" alt="Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(4)" height="111"></a> <a href="https://postimg.cc/14PY7Kbf" target="_blank">
+			  <img src="https://i.postimg.cc/14PY7Kbf/Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(7).jpg" alt="Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(7)" height="111"></a>
+			  <a href="https://postimg.cc/t7ymvz8J" target="_blank">
+			  <img src="https://i.postimg.cc/t7ymvz8J/Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(8).jpg" alt="Anfang-vom-Ende-Vor-der-Gerichtsverhandlung-(8)" height="111"></a> <a href="https://postimg.cc/8sDnXbxy" target="_blank">
+			  <img src="https://i.postimg.cc/8sDnXbxy/Besonderer-Gast.jpg" alt="Besonderer-Gast" height="111"></a> <a href="https://postimg.cc/dDvSN9gS" target="_blank">
+			  <img src="https://i.postimg.cc/dDvSN9gS/Der-Hammer.jpg" alt="Der-Hammer" height="111"></a> <a href="https://postimg.cc/Hj2vqyCw" target="_blank">
+			  <img src="https://i.postimg.cc/Hj2vqyCw/Druidin-contra-Wind.jpg" alt="Druidin-contra-Wind" height="111"></a>
+			  <a href="https://postimg.cc/Dmgp9XKP" target="_blank">
+			  <img src="https://i.postimg.cc/Dmgp9XKP/Ein-Lichtelf-elb-jedenfalls-was-weisses-eg.jpg" alt="Ein-Lichtelf-elb-jedenfalls-was-weisses-eg" height="111"></a> <a href="https://postimg.cc/3WBfsvT5" target="_blank">
+			  <img src="https://i.postimg.cc/3WBfsvT5/Exerzierubungen.jpg" alt="Exerzierubungen" height="111"></a> <a href="https://postimg.cc/JtqYfkL8" target="_blank">
+			  <img src="https://i.postimg.cc/JtqYfkL8/Kann-man-darauf-auch-Marshmallows-grillen-(2).jpg" alt="Kann-man-darauf-auch-Marshmallows-grillen-(2)" height="111"></a> <a href="https://postimg.cc/8sHX26ST" target="_blank">
+			  <img src="https://i.postimg.cc/8sHX26ST/Kann-man-darauf-auch-Marshmallows-grillen-(3).jpg" alt="Kann-man-darauf-auch-Marshmallows-grillen-(3)" height="111"></a>
+			  <a href="https://postimg.cc/nChSphF8" target="_blank">
+			  <img src="https://i.postimg.cc/nChSphF8/Meditation.jpg" alt="Meditation" height="111"></a> <a href="https://postimg.cc/PN4VgwjX" target="_blank">
+			  <img src="https://i.postimg.cc/PN4VgwjX/Meditation-(2).jpg" alt="Meditation-(2)" height="111"></a> <a href="https://postimg.cc/XpY14YjW" target="_blank">
+			  <img src="https://i.postimg.cc/XpY14YjW/Meine-Heizung.jpg" alt="Meine-Heizung" height="111"></a> <a href="https://postimg.cc/dDq4jVTS" target="_blank">
+			  <img src="https://i.postimg.cc/dDq4jVTS/Altar.jpg" alt="Altar" height="111"></a>
+			  <a href="https://postimg.cc/bdz39w2B" target="_blank">
+			  <img src="https://i.postimg.cc/bdz39w2B/Com-test.jpg" alt="Com-test" height="111"></a> <a href="https://postimg.cc/5jxnS2FG" target="_blank">
+			  <img src="https://i.postimg.cc/5jxnS2FG/Creo-mit-die-Knoten-im-Kopf.jpg" alt="Creo-mit-die-Knoten-im-Kopf" height="111"></a> <a href="https://postimg.cc/14JMC1pv" target="_blank">
+			  <img src="https://i.postimg.cc/14JMC1pv/der-Herr-der-Finsternis.jpg" alt="der-Herr-der-Finsternis" height="111"></a> <a href="https://postimg.cc/c6XT9GQD" target="_blank">
+			  <img src="https://i.postimg.cc/c6XT9GQD/Die-Mumie-bzw-Telcontar.jpg" alt="Die-Mumie-bzw-Telcontar" height="111"></a>
+			  <a href="https://postimg.cc/JtPK6CbP" target="_blank">
+			  <img src="https://i.postimg.cc/JtPK6CbP/Die-Mumie-II.jpg" alt="Die-Mumie-II" height="111"></a> <a href="https://postimg.cc/hhpMyR9y" target="_blank">
+			  <img src="https://i.postimg.cc/hhpMyR9y/Die-Mumie-kehrt-zuruck.jpg" alt="Die-Mumie-kehrt-zuruck" height="111"></a> <a href="https://postimg.cc/JtPK6CN8" target="_blank">
+			  <img src="https://i.postimg.cc/JtPK6CN8/Die-Ruhe-vor-dem-Sturm1.jpg" alt="Die-Ruhe-vor-dem-Sturm1" height="111"></a> <a href="https://postimg.cc/jCZvgYH0" target="_blank">
+			  <img src="https://i.postimg.cc/jCZvgYH0/Egon.jpg" alt="Egon" height="111"></a>
+			  <a href="https://postimg.cc/0rcZW1Yx" target="_blank">
+			  <img src="https://i.postimg.cc/0rcZW1Yx/Endschlacht1.jpg" alt="Endschlacht1" height="111"></a> <a href="https://postimg.cc/xqtgxVvq" target="_blank">
+			  <img src="https://i.postimg.cc/xqtgxVvq/Freund-oder-Feind.jpg" alt="Freund-oder-Feind" height="111"></a> <a href="https://postimg.cc/2VyGg9G5" target="_blank">
+			  <img src="https://i.postimg.cc/2VyGg9G5/IMAG0013.jpg" alt="IMAG0013" height="111"></a> <a href="https://postimg.cc/ZCnHXsHn" target="_blank">
+			  <img src="https://i.postimg.cc/ZCnHXsHn/IMAG0014.jpg" alt="IMAG0014" height="111"></a>
+			  <a href="https://postimg.cc/9r0bsgbD" target="_blank">
+			  <img src="https://i.postimg.cc/9r0bsgbD/IMAG0016.jpg" alt="IMAG0016" height="111"></a> <a href="https://postimg.cc/3dN1zf1y" target="_blank">
+			  <img src="https://i.postimg.cc/3dN1zf1y/IMAG0017.jpg" alt="IMAG0017" height="111"></a> <a href="https://postimg.cc/hfvsNZsd" target="_blank">
+			  <img src="https://i.postimg.cc/hfvsNZsd/IMAG0024.jpg" alt="IMAG0024" height="111"></a> <a href="https://postimg.cc/qzqwWDwK" target="_blank">
+			  <img src="https://i.postimg.cc/qzqwWDwK/IMAG0025.jpg" alt="IMAG0025" height="111"></a>&nbsp;<a href="https://postimg.cc/zVv7427S" target="_blank"><img src="https://i.postimg.cc/zVv7427S/IMAG0028.jpg" alt="IMAG0028" height="111"></a> <a href="https://postimg.cc/kBGsLYsy" target="_blank">
+			  <img src="https://i.postimg.cc/kBGsLYsy/IMAG0030.jpg" alt="IMAG0030" height="111"></a> <a href="https://postimg.cc/GHfKRPgx" target="_blank">
+			  <img src="https://i.postimg.cc/GHfKRPgx/IMAG0046.jpg" alt="IMAG0046" height="111"></a> <a href="https://postimg.cc/QHzmDgYk" target="_blank">
+			  <img src="https://i.postimg.cc/QHzmDgYk/IMAG0052.jpg" alt="IMAG0052" height="111"></a>
+			  <a href="https://postimg.cc/Vdhgw9Z9" target="_blank">
+			  <img src="https://i.postimg.cc/Vdhgw9Z9/IMAG0060.jpg" alt="IMAG0060" height="111"></a> <a href="https://postimg.cc/Vdhgw9Z7" target="_blank">
+			  <img src="https://i.postimg.cc/Vdhgw9Z7/IMAG0062.jpg" alt="IMAG0062" height="111"></a> <a href="https://postimg.cc/F76pvbCC" target="_blank">
+			  <img src="https://i.postimg.cc/F76pvbCC/IMAG0064.jpg" alt="IMAG0064" height="111"></a> <a href="https://postimg.cc/rKHjTGZY" target="_blank">
+			  <img src="https://i.postimg.cc/rKHjTGZY/IMAG0065.jpg" alt="IMAG0065" height="111"></a>
+			  <a href="https://postimg.cc/vcKhy72p" target="_blank">
+			  <img src="https://i.postimg.cc/vcKhy72p/IMAG0066.jpg" alt="IMAG0066" height="111"></a> <a href="https://postimg.cc/QHzmDgYv" target="_blank">
+			  <img src="https://i.postimg.cc/QHzmDgYv/IMAG0068.jpg" alt="IMAG0068" height="111"></a> <a href="https://postimg.cc/YhPR7ND5" target="_blank">
+			  <img src="https://i.postimg.cc/YhPR7ND5/IMAG0069.jpg" alt="IMAG0069" height="111"></a> <a href="https://postimg.cc/4m0PGvFk" target="_blank">
+			  <img src="https://i.postimg.cc/4m0PGvFk/IMAG0070.jpg" alt="IMAG0070" height="111"></a>
+			  <a href="https://postimg.cc/zVQ7NwPY" target="_blank">
+			  <img src="https://i.postimg.cc/zVQ7NwPY/IMAG0071.jpg" alt="IMAG0071" height="111"></a> <a href="https://postimg.cc/6yPcKV1X" target="_blank">
+			  <img src="https://i.postimg.cc/6yPcKV1X/IMAG0072.jpg" alt="IMAG0072" height="111"></a> <a href="https://postimg.cc/nCW2xKwx" target="_blank">
+			  <img src="https://i.postimg.cc/nCW2xKwx/IMAG0073.jpg" alt="IMAG0073" height="111"></a> <a href="https://postimg.cc/gx6D2w15" target="_blank">
+			  <img src="https://i.postimg.cc/gx6D2w15/IMAG0075.jpg" alt="IMAG0075" height="111"></a>
+			  <a href="https://postimg.cc/SnzrxXHw" target="_blank">
+			  <img src="https://i.postimg.cc/SnzrxXHw/IMAG0077.jpg" alt="IMAG0077" height="111"></a> <a href="https://postimg.cc/gx6D2wf9" target="_blank">
+			  <img src="https://i.postimg.cc/gx6D2wf9/IMAG0083.jpg" alt="IMAG0083" height="111"></a> <a href="https://postimg.cc/RWnRZ3jB" target="_blank">
+			  <img src="https://i.postimg.cc/RWnRZ3jB/IMAG0084.jpg" alt="IMAG0084" height="111"></a> <a href="https://postimg.cc/QFWbdBRs" target="_blank">
+			  <img src="https://i.postimg.cc/QFWbdBRs/IMAG0085.jpg" alt="IMAG0085" height="111"></a>
+			  <a href="https://postimg.cc/Yvm3C4Jp" target="_blank">
+			  <img src="https://i.postimg.cc/Yvm3C4Jp/IMAG0087.jpg" alt="IMAG0087" height="111"></a> <a href="https://postimg.cc/4Yh5xKrx" target="_blank">
+			  <img src="https://i.postimg.cc/4Yh5xKrx/IMAG0089.jpg" alt="IMAG0089" height="111"></a> <a href="https://postimg.cc/TKW93yZK" target="_blank">
+			  <img src="https://i.postimg.cc/TKW93yZK/IMAG0092.jpg" alt="IMAG0092" height="111"></a> <a href="https://postimg.cc/k2tcgVkV" target="_blank">
+			  <img src="https://i.postimg.cc/k2tcgVkV/IMAG0093.jpg" alt="IMAG0093" height="111"></a>
+			  <a href="https://postimg.cc/cKycgxSK" target="_blank">
+			  <img src="https://i.postimg.cc/cKycgxSK/IMAG0097.jpg" alt="IMAG0097" height="111"></a> <a href="https://postimg.cc/B89CLS0P" target="_blank">
+			  <img src="https://i.postimg.cc/B89CLS0P/IMAG0098.jpg" alt="IMAG0098" height="111"></a> <a href="https://postimg.cc/1ghKnmQw" target="_blank">
+			  <img src="https://i.postimg.cc/1ghKnmQw/IMAG0101.jpg" alt="IMAG0101" height="111"></a> <a href="https://postimg.cc/3y5Z48T1" target="_blank">
+			  <img src="https://i.postimg.cc/3y5Z48T1/IMAG0106.jpg" alt="IMAG0106" height="111"></a>
+			  <a href="https://postimg.cc/Nyqx9scp" target="_blank">
+			  <img src="https://i.postimg.cc/Nyqx9scp/IMAG0107.jpg" alt="IMAG0107" height="111"></a> <a href="https://postimg.cc/Y4KxGrHn" target="_blank">
+			  <img src="https://i.postimg.cc/Y4KxGrHn/IMAG0108.jpg" alt="IMAG0108" height="111"></a> <a href="https://postimg.cc/4K6QpDfb" target="_blank">
+			  <img src="https://i.postimg.cc/4K6QpDfb/IMAG0110.jpg" alt="IMAG0110" height="111"></a> <a href="https://postimg.cc/R37LwkS1" target="_blank">
+			  <img src="https://i.postimg.cc/R37LwkS1/IMAG0112.jpg" alt="IMAG0112" height="111"></a>
+			  <a href="https://postimg.cc/7C3nSFHn" target="_blank">
+			  <img src="https://i.postimg.cc/7C3nSFHn/IMAG0114.jpg" alt="IMAG0114" height="111"></a> <a href="https://postimg.cc/ns4GqyFT" target="_blank">
+			  <img src="https://i.postimg.cc/ns4GqyFT/IMAG0118.jpg" alt="IMAG0118" height="111"></a> <a href="https://postimg.cc/Lqt3jc9r" target="_blank">
+			  <img src="https://i.postimg.cc/Lqt3jc9r/IMAG0124.jpg" alt="IMAG0124" height="111"></a> <a href="https://postimg.cc/gwVH3Ccb" target="_blank">
+			  <img src="https://i.postimg.cc/gwVH3Ccb/IMAG0128.jpg" alt="IMAG0128" height="111"></a>
+			  <a href="https://postimg.cc/yJmy0M6H" target="_blank">
+			  <img src="https://i.postimg.cc/yJmy0M6H/IMAG0129.jpg" alt="IMAG0129" height="111"></a> <a href="https://postimg.cc/Lqt3jc4M" target="_blank">
+			  <img src="https://i.postimg.cc/Lqt3jc4M/IMAG0130.jpg" alt="IMAG0130" height="111"></a> <a href="https://postimg.cc/N9Q7DdLq" target="_blank">
+			  <img src="https://i.postimg.cc/N9Q7DdLq/IMAG0135.jpg" alt="IMAG0135" height="111"></a> <a href="https://postimg.cc/5YfqgsjV" target="_blank">
+			  <img src="https://i.postimg.cc/5YfqgsjV/Kampfgetummel.jpg" alt="Kampfgetummel" height="111"></a>
+			  <a href="https://postimg.cc/7GqM9Kbq" target="_blank">
+			  <img src="https://i.postimg.cc/7GqM9Kbq/Krieger-warten-auf-den-Angriff.jpg" alt="Krieger-warten-auf-den-Angriff" height="111"></a> <a href="https://postimg.cc/7GqM9KbH" target="_blank">
+			  <img src="https://i.postimg.cc/7GqM9KbH/Lichtelb1.jpg" alt="Lichtelb1" height="111"></a> <a href="https://postimg.cc/Kkmrf048" target="_blank">
+			  <img src="https://i.postimg.cc/Kkmrf048/Meditier.jpg" alt="Meditier" height="111"></a> <a href="https://postimg.cc/WFs685tp" target="_blank">
+			  <img src="https://i.postimg.cc/WFs685tp/Meditier1.jpg" alt="Meditier1" height="111"></a>
+			  <a href="https://postimg.cc/ftMjC8kT" target="_blank">
+			  <img src="https://i.postimg.cc/ftMjC8kT/Nach-der-Schlacht-ist-vor-der-Schlacht.jpg" alt="Nach-der-Schlacht-ist-vor-der-Schlacht" height="111"></a> <a href="https://postimg.cc/CBwH7cdK" target="_blank">
+			  <img src="https://i.postimg.cc/CBwH7cdK/Vater-und-Sohn.jpg" alt="Vater-und-Sohn" height="111"></a> <a href="https://postimg.cc/phPYCsyT" target="_blank">
+			  <img src="https://i.postimg.cc/phPYCsyT/Vater-und-Sohn2.jpg" alt="Vater-und-Sohn2" height="111"></a> <a href="https://postimg.cc/YGtfRdjj" target="_blank">
+			  <img src="https://i.postimg.cc/YGtfRdjj/Warten-auf-einen-Angriff.jpg" alt="Warten-auf-einen-Angriff" height="111"></a>
+			  <a href="https://postimg.cc/phPYCsym" target="_blank">
+			  <img src="https://i.postimg.cc/phPYCsym/Zeltaufbau.jpg" alt="Zeltaufbau" height="111"></a>  </div>
+        </main>
+    </div> <footer>
+        <div>Bianca Schütte 2026</div>
+    </footer>
+
+</body></html>
