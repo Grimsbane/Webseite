@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -59,10 +59,9 @@ header {
     /* --- HAUPTLAYOUT --- */
 .main-wrapper {
     display: flex;
-    margin-top: 259px;   /* Schiebt den Inhalt exakt unter den Header */
-    height: calc(100vh - 250px - 50px); /* 50px ist die Footer-Höhe */
+    margin-top: 259px;   /* Passend zum Header */
+    height: calc(100vh - 259px - 50px); /* 259px Header, 50px Footer */
 }
-
     /* --- SIDEBAR (HELL & ÜBERSICHTLICH) --- */
 /* --- SIDEBAR (TEXT-BASIERT) --- */
         .sidebar {
@@ -146,27 +145,72 @@ header {
     .auto-style6 {
 		display: block;
 		width: 100%;
-		font-size: large;
+		font-size: xx-large;
 		color: #5d2e0a;
 		margin-top: 40px;
 		margin-bottom: 20px;
 		border-bottom: 1px solid #d4c5a9;
 		letter-spacing: 2px;
-		font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+		font-family: Norse;
 	text-align: center;
 }
-	.auto-style7 {
+	.auto-style10 {
+		text-align: center;
+	}
+    .auto-style29 {
+	text-align: left;
+}
+.auto-style30 {
+	max-width: 850px;
+	margin: 0 auto;
+	color: #1a1a1a;
+	text-align: center;
+}
+    .auto-style31 {
+		font-family: Norse;
+	}
+	.auto-style35 {
+		text-align: center;
+		font-family: Norse;
 		font-size: large;
 	}
-	.auto-style8 {
-		font-family: "Times New Roman";
-		color: #000000;
+	.auto-style37 {
+		text-align: left;
+		font-size: medium;
 	}
-    .auto-style9 {
-	font-size: x-large;
-}
-    .auto-style10 {
-		text-align: center;
+    .auto-style38 {
+		display: flex;
+		flex: 1;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		color: #5d2e0a; /* Dunkelbraun */;
+		font-family: Viking-Normal;
+		font-size: 1.1em;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		transition: all 0.3s ease;
+/* Sanfter Übergang für das Leuchten */border-bottom: 1px solid rgba(93, 46, 10, 0.1); /* Dezente Trennlinie */
+	}
+    .auto-style39 {
+		border-color: #000000;
+		border-width: 0;
+	}
+    .auto-style40 {
+		display: flex;
+		flex: 1;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		color: #5d2e0a; /* Dunkelbraun */;
+		font-family: "Times New Roman", Times, serif;
+		font-size: 1.1em;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		transition: all 0.3s ease;
+/* Sanfter Übergang für das Leuchten */border-bottom: 1px solid rgba(93, 46, 10, 0.1); /* Dezente Trennlinie */
 	}
     </style>
 </head>
@@ -178,103 +222,143 @@ header {
     <div class="main-wrapper">
         
         <nav class="sidebar">
-            <a href="index.html" class="menu-item">Willkommen</a>
-            <a href="ueber-uns.html" class="menu-item">Über Uns</a>
-            <a href="mitglieder.html" class="menu-item">Mitglieder</a>
-            <a href="events.html" class="menu-item">Events</a>
-            <a href="landkarte.html" class="menu-item">Landkarte</a>
-            <a href="charakter.html" class="menu-item">Charaktere</a>
-            <a href="mitglied-werden.html" class="menu-item">Mitmachen</a>
-            <a href="faq.html" class="menu-item">FAQ</a>
-            <a href="galerie.html" class="menu-item">Galerie</a>
-            <a href="news.html" class="menu-item">Neuigkeiten</a>
-            <a href="merchandise.html" class="menu-item">Merchandise</a>
-            <a href="impressum.html" class="menu-item">Impressum</a>
-        </nav>
-
-        <main class="content-area">
-            <div class="content-text">
-                <h2 class="auto-style6">
-				<img height="116" src="willkommen.png" width="480"></h2>
+            <a href="index.html" class="auto-style40"><strong>Willkommen</strong></a>
+            <a href="ueber-uns.html" class="auto-style40"><strong>Über Uns</strong></a>
+            <a href="mitglieder.html" class="auto-style40"><strong>Mitglieder</strong></a>
+            <a href="events.html" class="auto-style40"><strong>Events</strong></a>
+            <a href="landkarte.html" class="auto-style40"><strong>Landkarte</strong></a>
+            <a href="charakter.dwt" class="auto-style40"><strong>Charaktere</strong></a>
+            <a href="mitglied-werden.html" class="auto-style40"><strong>Mitmachen</strong></a>
+            <a href="faq.html" class="auto-style40"><strong>FAQ</strong></a>
+            <a href="galerie.html" class="auto-style40"><strong>Galerie</strong></a>
+            <a href="news.html" class="auto-style40"><strong>Neuigkeiten</strong></a>
+            <a href="merchandise.html" class="auto-style40"><strong>Merchandise</strong></a>
+            <a href="impressum.html" class="auto-style40"><strong>Impressum</strong></a></nav>
+		<main class="content-area">
+            <div class="auto-style30">
+                <p class="auto-style6" style="height: 7px">
+				<strong>Charakter</strong>&nbsp;</p>
+				<table class="auto-style39" style="width: 100%">
+					<tr>
+						<td style="width: 260px; height: 262px;">
+						<img height="381" src="bali1.png" width="250"></td>
+						<td class="auto-style29" style="width: 268px; height: 262px;">
+						<span class="auto-style31"><strong>Name</strong></span>:&nbsp;Bali<br>
+						<span class="auto-style31"><strong>Titel</strong></span>:&nbsp;<br>
+						<span class="auto-style31"><strong>Alias</strong></span>:&nbsp;<br>
+						<span class="auto-style31"><strong>Alter</strong></span>:&nbsp;45 Jahre<br>
+						<span class="auto-style31"><strong>Geboren</strong></span>:&nbsp;Frühjahr<br>
+						<span class="auto-style31"><strong>Herkunft</strong></span>:&nbsp;Wüstenland<br>
+						<span class="auto-style31"><strong>Gilde</strong></span>:&nbsp;Grimsbane<br>
+						<span class="auto-style31"><strong>Gildensitz</strong></span>:&nbsp;Meldarn, Silmanore<br>
+						<span class="auto-style31"><strong>Wohnsitz</strong></span>:&nbsp;Meldarn, 
+						Silmanore</td>
+						<td style="height: 262px">
+						<p class="auto-style29"><span class="auto-style31">
+						<strong>Profession</strong></span>:&nbsp;Heilerin<br>
+						<span class="auto-style31"><strong>Rasse</strong></span>:&nbsp;Mensch<br>
+						<span class="auto-style31"><strong>Wandelbar</strong></span>:&nbsp;<br>
+						<span class="auto-style31"><strong>Vater</strong></span>:&nbsp;verstorben<br>
+						<span class="auto-style31"><strong>Mutter</strong></span>:&nbsp;verstorben<br>
+						<span class="auto-style31"><strong>Mentor</strong></span>:&nbsp;Narvik&nbsp;Grimsbane<br>
+						<span class="auto-style31"><strong>Geschwister</strong></span>:&nbsp;<br>
+						<span class="auto-style31"><strong>Besonderheiten</strong></span>:&nbsp;Spirituell</p>
+						<p class="auto-style29"><span class="auto-style31">
+						<strong>Wesen</strong></span>:&nbsp;Eichhörnchen</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="auto-style38" style="width: 260px"></td>
+						<td class="auto-style35" style="width: 268px"><strong>
+						Conerfahrungen des Spielers </strong></td>
+						<td class="auto-style38">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="auto-style29" style="height: 40px; width: 260px">
+						2023 - Drachenfest<br>2024 - Drachenfest</td>
+						<td class="auto-style29" style="width: 268px; height: 40px">
+						</td>
+						<td style="height: 40px"></td>
+					</tr>
+				</table>
+				<br>
+				<p><img height="93" src="trennner.png" width="624">&nbsp;</p>
+				<table class="auto-style39" style="width: 100%">
+					<tr>
+						<td style="width: 261px">
+						<img height="274" src="narvikprotrait.png" width="200"></td>
+						<td class="auto-style29" style="width: 268px">
+						<span class="auto-style31"><strong>Name</strong></span>:&nbsp;Narvik Grimsbane<br>
+						<span class="auto-style31"><strong>Titel</strong></span>:&nbsp;von Meldarn<br>
+						<span class="auto-style31"><strong>Alias</strong></span>:&nbsp;grauer Wolf<br>
+						<span class="auto-style31"><strong>Alter</strong></span>:&nbsp;75 
+						Jahre<br><span class="auto-style31"><strong>Geboren</strong></span>:&nbsp;Winterkind<br>
+						<span class="auto-style31"><strong>Herkunft</strong></span>:&nbsp;Meldarn, 
+						Silmanore<br><span class="auto-style31"><strong>Gilde</strong></span>:&nbsp;Grimsbane<br>
+						<span class="auto-style31"><strong>Gildensitz</strong></span>:&nbsp;Meldarn, 
+						Silmanore<br><span class="auto-style31"><strong>Wohnsitz</strong></span>:&nbsp;Meldarn, Silmanore</td>
+						<td>
+						<p class="auto-style29"><span class="auto-style31">
+						<strong>Profession</strong></span>:&nbsp;Krieger - Hexer<br>
+						<span class="auto-style31"><strong>Rasse</strong></span>:&nbsp;Mensch<br>
+						<span class="auto-style31"><strong>Freunde</strong></span>:&nbsp;Bali<br>
+						<span class="auto-style31"><strong>ziehVater</strong></span>:&nbsp;Haldor 
+						Grimsbane - NSC<br><span class="auto-style31"><strong>
+						ziehMutter</strong></span>:&nbsp;Sindri Grimsbane - NSC <br>
+						<span class="auto-style31"><strong>Mentor</strong></span>:&nbsp;Baldur Grimsbane<br>
+						<span class="auto-style31"><strong>Geschwister</strong></span>:&nbsp;Eric 
+						Fürm - NSC<br>
+						<span class="auto-style31"><strong>Besonderheiten</strong></span>:&nbsp;Spirituell</p>
+						<p class="auto-style29"><span class="auto-style31">
+						<strong>Wesen</strong></span>: Fels in der Brandung mit 
+						Feuer</p>
+						</td>
+					</tr>
+					<tr>
+						<td class="auto-style38" style="width: 260px">&nbsp;</td>
+						<td class="auto-style35" style="width: 268px"><strong>
+						Conerfahrungen des Spielers </strong></td>
+						<td class="auto-style38" style="width: 260px">&nbsp;</td>					</tr>
+					<tr>
+						<td class="auto-style37" style="height: 40px; width: 261px">
+				<p class="auto-style29">08/2004 Taverne Leverkusen</p>
+				<p class="auto-style37">05/2005 Galadoriath&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+				<p class="auto-style37">06/2005 Taverne Leverkusen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+				<p class="auto-style37">06/2006 Taverne Leverkusen&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+				<p class="auto-style37">07/2006 Drachenfest&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+				<p class="auto-style37">09/2006 Katakomben Köln&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+				<p class="auto-style37">04/2007 Katakomben Köln&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
+				<p class="auto-style37">06/2007 Katakomben Köln&nbsp; </p>
+						</td>
+						<td class="auto-style29" style="width: 268px; height: 40px">
+				<p class="auto-style37">07/2007 Drachenfest&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="auto-style37">11/2007 Katakomben Köln</p>
+				<p class="auto-style37">12/2007 Katakomben Köln&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="auto-style37">04/2008 Katakomben Köln&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="auto-style37">05/2008 Katakomben Köln&nbsp;&nbsp;&nbsp;</p>
+				<p class="auto-style37">&nbsp;07/2008 Drachenfest&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="auto-style37">07/2008 Drachenfest&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="auto-style37">09/2008 Galadoriath&nbsp;&nbsp;&nbsp;&nbsp;</p>
+				<p class="auto-style37">09/2008&nbsp;Katakomben Köln</p>
+						</td>
+						<td style="height: 40px">
+				<p class="auto-style37">07/2011 Drachenfest</p>
+				<p class="auto-style37">10/2012 Katakomben Köln</p>
+				<p class="auto-style37">&nbsp;05/2013 Katakomben Köln</p>
+				<p class="auto-style37">07/2013 Drachenfest</p>
+				<p class="auto-style37">07/2014 Drachenfest</p>
+				<p class="auto-style37">03/2015 Taverne Corona</p>
+				<p class="auto-style37">07/2023 Drachenfest</p>
+				<p class="auto-style37">07/2024 Drachenfest</p>
+						</td>
+					</tr>
+				</table>
 				<p class="auto-style10">&nbsp;</p>
-				<p>&nbsp;</p>
-				<p class="auto-style10"><span class="auto-style8">
-				<span class="auto-style7">Schön, 
-				dass du den Weg zu uns gefunden hast!</span></span></p>
-				<p><span class="auto-style8"><br class="auto-style7">
-				<span class="auto-style7">Wir sind eine junge 
-				Live-Rollenspiel-Gruppe, die mit viel Leidenschaft und Freude in 
-				fantastische Welten eintaucht. Noch stehen wir am Anfang – 
-				aktuell besteht unsere Gemeinschaft aus drei Spielern – doch 
-				unser Ziel ist es, eine lebendige Gilde aufzubauen, in der viele 
-				Abenteurer, Träumer und Kämpfer zusammenfinden.</span></span></p>
-				<p><span class="auto-style8"></p>
-				<h2 class="auto-style7">&nbsp;</h2>
-				<h2 class="auto-style9">
-				<img height="54" src="wersindwir.png" width="371"></h2>
-				<p class="auto-style7">Wir sind keine alteingesessene 
-				Großgruppe, sondern eine Gemeinschaft im Aufbau. Das macht uns 
-				besonders: Bei uns kannst du von Anfang an mitgestalten, Ideen 
-				einbringen und deine Rolle in einer wachsenden Gilde finden. Wir 
-				suchen Menschen, die wie wir Lust haben, gemeinsam Abenteuer zu 
-				erleben, Freundschaften zu knüpfen und etwas Neues entstehen zu 
-				lassen.</p>
-				<h2 class="auto-style7">&nbsp;</h2>
-				<h2 class="auto-style9"><span class="auto-style8"><span class="auto-style9">
-				<img height="487" src="balispazieren1.png" style="float: left" width="300"></span></span>Unser Ziel</h2>
-				<p class="auto-style7">Unser erster großer Schritt führt uns 
-				zum&nbsp;Drachenfest, wo wir als Gilde auftreten wollen. Doch damit 
-				soll es nicht enden: Auch andere Cons – ob groß oder klein – 
-				stehen für uns offen. Wir möchten langfristig eine Gruppe 
-				schaffen, die nicht nur auf einem einzelnen Event präsent ist, 
-				sondern als Gemeinschaft weiterwächst.</p>
-				<p class="auto-style7">&nbsp;</p>
-				<h2 class="auto-style9">Was dich bei uns erwartet</h2>
-				<ul>
-					<li>
-					<p class="auto-style7">Gemeinschaft &amp; Zusammenhalt&nbsp;– Wir 
-					stehen füreinander ein, im Spiel wie auch außerhalb.</p>
-					</li>
-					<li>
-					<p class="auto-style7">Raum für Kreativität&nbsp;– Dein Charakter 
-					soll bei uns Platz haben, egal ob Held, Heiler, Gelehrter 
-					oder Draufgänger.</p>
-					</li>
-					<li>
-					<p class="auto-style7">Unterstützung für Einsteiger&nbsp;– Auch 
-					wenn du noch nie auf einem Con warst: Wir helfen dir gern 
-					mit Tipps zu Charakterkonzept, Ausrüstung und allem, was du 
-					wissen musst.</p>
-					</li>
-					<li>
-					<p class="auto-style7">Freude am Spiel&nbsp;– Uns geht es nicht 
-					um Perfektion, sondern darum, gemeinsam Spaß zu haben und 
-					Geschichten zu erschaffen.</p>
-					</li>
-				</ul>
-				<h2 class="auto-style7"><br><span class="auto-style9">Unsere Werte<img height="275" src="narvikfeuer1.png" style="float: right" width="300"></span></h2>
-				<p class="auto-style7">Respekt, Fairness und ein freundliches 
-				Miteinander sind für uns selbstverständlich. Wir legen Wert 
-				darauf, dass jeder sich willkommen fühlt – unabhängig von 
-				Erfahrung, Herkunft oder Charakterkonzept.</p>
-				<p class="auto-style7">&nbsp;</p>
-				<h2 class="auto-style9">Werde Teil unserer Gilde</h2>
-				<p class="auto-style7">Wenn du noch keine Gruppe hast, aber den 
-				Wunsch nach Anschluss verspürst, bist du bei uns genau richtig. 
-				Ob du allein kommst oder mit Freunden – wir freuen uns über 
-				jeden, der mit uns die Gilde wachsen lässt.</p>
-				<p class="auto-style7">&nbsp;</p>
-				<p><span class="auto-style7">Hast du Lust, dabei zu sein?</span><br class="auto-style7">
-				<br class="auto-style7"><span class="auto-style7">Dann melde 
-				dich bei uns und werde Teil einer Gemeinschaft, die gerade erst 
-				beginnt, aber schon voller Abenteuer steckt.</span></p>
-				<p>&nbsp;</p>
-				<p class="auto-style7"><strong><em>Auf ins Spiel – wir sehen uns beim 
-				Drachenfest!</em></strong></span></p>
+				<br>
             </div>
         </main>
-    </div> <footer>
-        <div>Bianca Schütte 2026</div>
-    </footer>
-
+    </div> 
+    <footer style="position: fixed; bottom: 0; left: 0; height: 50px;">
+    <div>Bianca Schütte 2026</div>
+</footer>
 </body></html>
